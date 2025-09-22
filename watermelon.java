@@ -5,13 +5,13 @@ public class watermelon {
         
         Scanner sc=new Scanner(System.in);
         int a=sc.nextInt();
-        if((a+1)%2==0)
+        if((a)%2==0)
         {
-            System.out.println("NO");
+            System.out.println("YES");
         }
         else 
         {
-            System.out.println("YES");
+            System.out.println("NO");
         }
         sc.close();
     }

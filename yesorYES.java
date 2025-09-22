@@ -6,7 +6,7 @@ public class yesorYES {
         while(n--!=0)
         {
             String s=sc.next().toLowerCase();
-            if(s.charAt(0)=='y'&&s.charAt(1)=='e'&&s.charAt(2)=='s')
+            if(s.equals("yes"))
             System.out.println("YES");
             else
             System.out.println("NO");
