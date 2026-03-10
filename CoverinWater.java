@@ -7,21 +7,28 @@ public class CoverinWater {
         {
             int n=sc.nextInt();
             String str=sc.next();
-            int idx=0;
             int ans=0;
-            while(idx<n-1)
-                {
-                int cnt=0;
-                while(idx<n&&str.charAt(idx)!='#')
+            int cnt=0;
+            int tot=0;
+            for(char ch:str.toCharArray())
+            {
+                if(ch=='.')
                 {
                     cnt++;
-                    idx++;
+                    tot++;
+                    ans=Math.max(ans,cnt);
                 }
-                if(cnt==1||cnt==2)
-                    ans+=1;
-                idx++;
+                else
+                {
+                    cnt=0;
+                }
             }
-            System.out.println(ans);
+            ans=Math.max(cnt,ans);
+            if(ans>2)
+                System.out.println("2");
+            else            
+                System.out.println(tot);
         }
+        sc.close();
     }
 }
