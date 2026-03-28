@@ -8,12 +8,13 @@ public class FloorNumber {
 		{
 		    int n=sc.nextInt();
             int x=sc.nextInt();
-            if(n==1)
+            if(n<=2)
                 System.out.println(1);
             else
             {
-                System.out.println((int)Math.round(n/(double)x)+1);
+                System.out.println(1+(int)Math.ceil((n-2)/(double)x));
             }
 		}
+        sc.close();
     }
 }
