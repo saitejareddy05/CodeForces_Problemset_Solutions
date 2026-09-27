@@ -20,14 +20,3 @@ void weep()
 System.out.println("Baby Dog weeping"); 
 } 
 } 
-class testInheritance
-{ 
-public static void main(String args[]) 
-{ 
-BabyDog d=new BabyDog(); 
-d.name="MotherDog"; 
-d.show(); 
-d.bark(); 
-d.weep(); 
-} 
-} 
