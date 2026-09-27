@@ -40,17 +40,15 @@ public class Coins {
             long a = fs.nextLong();
             long b = fs.nextLong();
 
-            boolean possible = false;
+            boolean possible;
 
-            long maximumY = a / b;
-
-            for (long y = 0; y <= maximumY; y++) {
-                long remaining = a - b * y;
-
-                if (remaining % 2 == 0) {
-                    possible = true;
-                    break;
-                }
+            if (a % 2 == 0) {
+                // y = 0 works: 2 * (a / 2) + b * 0 = a
+                possible = true;
+            } else {
+                // For odd a, b and y must both be odd.
+                // The smallest valid y is 1.
+                possible = (b % 2 == 1 && a >= b);
             }
 
             result.append(possible ? "YES\n" : "NO\n");
